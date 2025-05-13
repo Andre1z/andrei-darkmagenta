@@ -4,14 +4,15 @@ Módulo principal para la aplicación "Buscar y Reemplazar" con interfaz gráfic
 Esta aplicación permite abrir, editar y guardar archivos, realizar búsquedas y reemplazos
 de texto, y cambiar entre modo claro y oscuro. La interfaz incluye botones personalizados
 con esquinas redondeadas (implementados mediante un Canvas) para mejorar la experiencia
-visual. En modo oscuro, se actualiza el fondo de todos los componentes para integrarse de
-manera coherente con el tema.
+visual. Además, se asigna la imagen "darkmagenta.png" como ícono de la aplicación, remplazando
+el ícono por defecto de Tkinter.
 
 Funcionalidades principales:
 - Abrir y guardar archivos (cualquier tipo de archivo).
 - Buscar una palabra y resaltarla en el área de texto.
-- Aplicar reemplazos en el texto, mediante una función que procesa la cadena.
-- Alternar entre modo claro y oscuro, actualizando dinámicamente los estilos de la interfaz.
+- Aplicar reemplazos en el texto mediante una función de procesamiento.
+- Alternar entre modo claro y oscuro actualizando dinámicamente los estilos de la interfaz.
+- Uso de un ícono personalizado ("darkmagenta.png") para la ventana.
 
 Autor: Andrei Buga
 """
@@ -99,6 +100,10 @@ class RoundedButton(tk.Canvas):
 class SearchReplaceApp(tk.Tk):
     def __init__(self):
         super().__init__()
+        # Asignamos el ícono personalizado a la aplicación usando la imagen ubicada en /assets
+        icon_path = os.path.join("assets", "darkmagenta.png")
+        self.iconphoto(False, tk.PhotoImage(file=icon_path))
+        
         # Modo claro por defecto
         self.dark_mode = False
         self.light_bg = "#f5f5f5"
