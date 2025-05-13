@@ -14,7 +14,20 @@ Andrei DarkMagenta es una aplicación de escritorio desarrollada en Python utili
 ## Estructura del Proyecto
 
 ```
-andrei-darkmagenta/ ├── .gitattributes ├── README.md # Este archivo (README.txt con formato Markdown) ├── _internal # Archivos internos y utilidades del proyecto ├── assets │ ├── darkmagenta.ico # Ícono en formato ICO │ └── darkmagenta.png # Ícono en formato PNG (usado en la interfaz) ├── search&replace.exe # Versión ejecutable de la aplicación └── src ├── init.py # Inicializa el paquete ├── main_tkinter.py # Punto de entrada de la aplicación gráfica ├── search_replace.py # Lógica de búsqueda y reemplazo de texto └── utils.py # Funciones utilitarias para manejo de archivos
+andrei-darkmagenta/
+├── .gitattributes      # Configuraciones específicas de Git (por ejemplo, normalización de finales de línea).
+├── README.md           # Documentación del proyecto en formato Markdown, con instrucciones de uso, características y demás información relevante.
+├── _internal           # Carpeta reservada para archivos internos o scripts de soporte que no se distribuyen directamente.
+├── assets              # Directorio de recursos gráficos e íconos.
+│   ├── darkmagenta.ico # Ícono de la aplicación en formato ICO (usado generalmente en Windows).
+│   └── darkmagenta.png # Imagen en formato PNG usada como ícono en la interfaz de la aplicación.
+├── search&replace.exe  # Ejecutable de la aplicación para usuarios que prefieren no trabajar con el código fuente.
+└── src                 # Directorio que contiene el código fuente de la aplicación.
+    ├── __init__.py     # Inicializa el paquete, definiendo la API pública del proyecto.
+    ├── main_tkinter.py # Punto de entrada de la aplicación, que contiene la interfaz gráfica basada en Tkinter.
+    ├── search_replace.py  # Módulo que implementa la lógica principal de búsqueda y reemplazo de texto.
+    └── utils.py        # Módulo con funciones utilitarias (por ejemplo, lectura/escritura de archivos, validaciones, etc.).
+
 ```
 
 ## Uso
