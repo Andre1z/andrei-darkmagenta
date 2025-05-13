@@ -1,3 +1,21 @@
+"""
+Módulo principal para la aplicación "Buscar y Reemplazar" con interfaz gráfica de Tkinter.
+
+Esta aplicación permite abrir, editar y guardar archivos, realizar búsquedas y reemplazos
+de texto, y cambiar entre modo claro y oscuro. La interfaz incluye botones personalizados
+con esquinas redondeadas (implementados mediante un Canvas) para mejorar la experiencia
+visual. En modo oscuro, se actualiza el fondo de todos los componentes para integrarse de
+manera coherente con el tema.
+
+Funcionalidades principales:
+- Abrir y guardar archivos (cualquier tipo de archivo).
+- Buscar una palabra y resaltarla en el área de texto.
+- Aplicar reemplazos en el texto, mediante una función que procesa la cadena.
+- Alternar entre modo claro y oscuro, actualizando dinámicamente los estilos de la interfaz.
+
+Autor: Andrei Buga
+"""
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext
 import os
@@ -166,7 +184,7 @@ class SearchReplaceApp(tk.Tk):
             entry_bg = self.entry_dark_bg
             entry_fg = self.dark_text
             entry_hl = self.entry_dark_hl
-            text_area_bg = self.entry_dark_bg  # Usamos el mismos tono que en el entry
+            text_area_bg = self.entry_dark_bg  # Usamos el mismo tono que en el entry
             text_area_fg = self.dark_text
             toggle_text = "Modo Claro"
         else:
