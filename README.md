@@ -78,3 +78,6 @@ Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` 
 ---
 
 ¡Disfruta usando Andrei DarkMagenta y optimiza tu flujo de trabajo en la edición de archivos!
+
+
+
